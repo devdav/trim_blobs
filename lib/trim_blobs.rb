@@ -6,5 +6,4 @@ require 'active_record'
 
 ActiveRecord::ConnectionAdapters::AbstractAdapter.class_eval do
   include TrimBlobs::ActiveRecord::ConnectionAdapters::AbstractAdapter
-  alias_method_chain :log, :blobs_trimmed
 end
